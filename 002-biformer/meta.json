@@ -1,0 +1,21 @@
+{
+  "id": "002-biformer",
+  "title": "【医学图像分割模块】BiFormer / 双层路由注意力（CVPR 2023）—— 只算\"该算的地方\"的稀疏注意力",
+  "tags": [
+    "医学图像分割",
+    "BiFormer",
+    "注意力机制",
+    "稀疏注意力",
+    "PyTorch"
+  ],
+  "venue": "CVPR 2023",
+  "paper": "https://arxiv.org/abs/2303.08810",
+  "code": "https://github.com/rayleizhu/BiFormer",
+  "files": [
+    "biformer.py",
+    "demo.py",
+    "figure.png",
+    "readme.md"
+  ],
+  "name": "BiFormer"
+}
