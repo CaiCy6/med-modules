@@ -1,0 +1,20 @@
+{
+  "id": "001-fasternet",
+  "title": "【医学图像分割模块】FasterNet / PConv（CVPR 2023）—— 只卷一部分通道，又快又准",
+  "tags": [
+    "医学图像分割",
+    "PConv",
+    "FasterNet",
+    "轻量化",
+    "PyTorch"
+  ],
+  "venue": "CVPR 2023",
+  "paper": "https://arxiv.org/abs/2303.03667",
+  "code": "https://github.com/JierunChen/FasterNet",
+  "files": [
+    "demo.py",
+    "fasternet.py",
+    "figure.png",
+    "readme.md"
+  ]
+}
