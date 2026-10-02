@@ -1,7 +1,7 @@
 # 医学图像分割 · 即插即用模块合集 —— 索引
 
 > 本文件由 `tools/module_index.py` 自动生成，**请勿手改**。
-> 最后更新：2026-10-02 21:27:09+0800
+> 最后更新：2026-10-02 21:31:58+0800
 >
 > 作用：**每日模块的唯一登记表** —— 新建前自动查重、发布后自动登记，避免重复选题。
 
@@ -12,7 +12,7 @@
 | # | 模块 | 论文出处 | 首建 | 状态 | 首发链接 |
 |---|------|---------|------|------|---------|
 | 001 | FasterNet | CVPR 2023 | 2026-10-02 | published | [csdn](https://blog.csdn.net/m0_66049958/article/details/166994048) |
-| 002 | BiFormer | CVPR 2023 | 2026-10-02 | built | — |
+| 002 | BiFormer | CVPR 2023 | 2026-10-02 | built | [csdn](https://editor.csdn.net/md?articleId=166994956) |
 
 ## 已占用模块（新建前查重名单）
 
@@ -32,4 +32,5 @@
 - 出处：CVPR 2023 ｜ 论文：https://arxiv.org/abs/2303.08810 ｜ 官方码：https://github.com/rayleizhu/BiFormer
 - 本地：`modules/002-biformer/` ｜ 仓库：https://github.com/CaiCy6/med-modules/tree/main/002-biformer
 - 首建：2026-10-02 ｜ 状态：built
+  - csdn · draft · 2026-10-02 · https://editor.csdn.net/md?articleId=166994956
 
