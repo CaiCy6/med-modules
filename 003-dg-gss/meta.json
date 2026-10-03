@@ -1,0 +1,22 @@
+{
+  "id": "003-dg-gss",
+  "title": "【医学图像分割模块】DG-GSS / 方向-组图选择性扫描（arXiv 2026）—— 让轻量分割网络\"扫\"得更聪明",
+  "tags": [
+    "医学图像分割",
+    "Mamba",
+    "状态空间",
+    "选择性扫描",
+    "轻量化",
+    "PyTorch"
+  ],
+  "venue": "arXiv 2026",
+  "paper": "https://arxiv.org/abs/2609.26729",
+  "code": "https://github.com/CaiCy6/med-modules",
+  "files": [
+    "demo.py",
+    "dg-gss.py",
+    "figure.png",
+    "readme.md"
+  ],
+  "name": "DG-GSS"
+}
