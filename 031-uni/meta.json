@@ -1,0 +1,21 @@
+{
+  "id": "031-uni",
+  "title": "【医学图像分割模块】Uni —— Uni-Encoder Meets Multi-Encoders: Representation Before Fusi",
+  "tags": [
+    "医学图像分割",
+    "Uni",
+    "模块",
+    "即插即用",
+    "PyTorch"
+  ],
+  "venue": "CVPR 2026",
+  "paper": "https://arxiv.org/abs/2604.22177v1",
+  "code": "https://github.com/Hooorace-S/UniME",
+  "files": [
+    "demo.py",
+    "figure.png",
+    "readme.md",
+    "uni.py"
+  ],
+  "name": "Uni"
+}

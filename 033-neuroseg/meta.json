@@ -1,0 +1,21 @@
+{
+  "id": "033-neuroseg",
+  "title": "【医学图像分割模块】NeuroSeg Meets DINOv3 —— NeuroSeg Meets DINOv3: Transferring 2D Self-Supervised Visua",
+  "tags": [
+    "医学图像分割",
+    "NeuroSeg Meets DINOv3",
+    "模块",
+    "即插即用",
+    "PyTorch"
+  ],
+  "venue": "CVPR 2026",
+  "paper": "https://arxiv.org/abs/2603.23104v1",
+  "code": "https://github.com/yy0007/NeurINO",
+  "files": [
+    "demo.py",
+    "figure.png",
+    "neuroseg.py",
+    "readme.md"
+  ],
+  "name": "Neuroseg"
+}

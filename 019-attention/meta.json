@@ -1,0 +1,21 @@
+{
+  "id": "019-attention",
+  "title": "【医学图像分割模块】Attention —— Attention-Based Prototype Calibration for Multi-Rater Few-Sh",
+  "tags": [
+    "医学图像分割",
+    "Attention",
+    "模块",
+    "即插即用",
+    "PyTorch"
+  ],
+  "venue": "MICCAI 2026",
+  "paper": "https://arxiv.org/abs/2606.16325v2",
+  "code": "",
+  "files": [
+    "attention.py",
+    "demo.py",
+    "figure.png",
+    "readme.md"
+  ],
+  "name": "Attention"
+}

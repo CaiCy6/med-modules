@@ -1,0 +1,21 @@
+{
+  "id": "036-latent",
+  "title": "【医学图像分割模块】Latent —— Latent-to-Latent Flow for Volumetric Stochastic Segmentation",
+  "tags": [
+    "医学图像分割",
+    "Latent",
+    "模块",
+    "即插即用",
+    "PyTorch"
+  ],
+  "venue": "MICCAI 2026",
+  "paper": "https://arxiv.org/abs/2609.07460v1",
+  "code": "",
+  "files": [
+    "demo.py",
+    "figure.png",
+    "latent.py",
+    "readme.md"
+  ],
+  "name": "Latent"
+}

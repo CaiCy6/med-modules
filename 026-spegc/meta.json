@@ -1,0 +1,21 @@
+{
+  "id": "026-spegc",
+  "title": "【医学图像分割模块】SPEGC —— SPEGC: Continual Test-Time Adaptation via Semantic-Prompt-En",
+  "tags": [
+    "医学图像分割",
+    "SPEGC",
+    "模块",
+    "即插即用",
+    "PyTorch"
+  ],
+  "venue": "CVPR 2026",
+  "paper": "",
+  "code": "",
+  "files": [
+    "demo.py",
+    "figure.png",
+    "readme.md",
+    "spegc.py"
+  ],
+  "name": "Spegc"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "037-evaluating",
+  "title": "【医学图像分割模块】Evaluating the Effects of Inter —— Evaluating the Effects of Inter-Observer and Model Variabili",
+  "tags": [
+    "医学图像分割",
+    "Evaluating the Effects of Inter",
+    "模块",
+    "即插即用",
+    "PyTorch"
+  ],
+  "venue": "MICCAI 2026",
+  "paper": "",
+  "code": "",
+  "files": [
+    "demo.py",
+    "evaluating.py",
+    "figure.png",
+    "readme.md"
+  ],
+  "name": "Evaluating"
+}

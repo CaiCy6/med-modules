@@ -1,0 +1,21 @@
+{
+  "id": "038-improving",
+  "title": "【医学图像分割模块】Improving Cross —— Improving Cross-Site Whole-Heart Segmentation",
+  "tags": [
+    "医学图像分割",
+    "Improving Cross",
+    "模块",
+    "即插即用",
+    "PyTorch"
+  ],
+  "venue": "MICCAI 2026",
+  "paper": "https://arxiv.org/abs/2608.25109v1",
+  "code": "",
+  "files": [
+    "demo.py",
+    "figure.png",
+    "improving.py",
+    "readme.md"
+  ],
+  "name": "Improving"
+}

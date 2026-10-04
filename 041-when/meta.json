@@ -1,0 +1,21 @@
+{
+  "id": "041-when",
+  "title": "【医学图像分割模块】When Adaptation Hurts —— When Adaptation Hurts: Connecting Representational Drift to",
+  "tags": [
+    "医学图像分割",
+    "When Adaptation Hurts",
+    "模块",
+    "即插即用",
+    "PyTorch"
+  ],
+  "venue": "MICCAI 2026",
+  "paper": "https://arxiv.org/abs/2608.21300v2",
+  "code": "",
+  "files": [
+    "demo.py",
+    "figure.png",
+    "readme.md",
+    "when.py"
+  ],
+  "name": "When"
+}

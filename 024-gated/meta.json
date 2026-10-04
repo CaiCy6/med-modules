@@ -1,0 +1,21 @@
+{
+  "id": "024-gated",
+  "title": "【医学图像分割模块】T —— T-Gated Adapter: A Lightweight Temporal Adapter for Vision-L",
+  "tags": [
+    "医学图像分割",
+    "T",
+    "模块",
+    "即插即用",
+    "PyTorch"
+  ],
+  "venue": "CVPR 2026",
+  "paper": "https://arxiv.org/abs/2604.08167v1",
+  "code": "",
+  "files": [
+    "demo.py",
+    "figure.png",
+    "gated.py",
+    "readme.md"
+  ],
+  "name": "Gated"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "042-inference",
+  "title": "【医学图像分割模块】Inference —— Inference-Time Orthogonal Seeding Enables Geometry-Aligned 3",
+  "tags": [
+    "医学图像分割",
+    "Inference",
+    "模块",
+    "即插即用",
+    "PyTorch"
+  ],
+  "venue": "MICCAI 2026",
+  "paper": "https://arxiv.org/abs/2608.12658v1",
+  "code": "",
+  "files": [
+    "demo.py",
+    "figure.png",
+    "inference.py",
+    "readme.md"
+  ],
+  "name": "Inference"
+}

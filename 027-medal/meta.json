@@ -1,0 +1,21 @@
+{
+  "id": "027-medal",
+  "title": "【医学图像分割模块】Medal S —— Medal S: Spatio-Textual Prompt Model for Medical Segmentatio",
+  "tags": [
+    "医学图像分割",
+    "Medal S",
+    "模块",
+    "即插即用",
+    "PyTorch"
+  ],
+  "venue": "CVPR 2025",
+  "paper": "",
+  "code": "",
+  "files": [
+    "demo.py",
+    "figure.png",
+    "medal.py",
+    "readme.md"
+  ],
+  "name": "Medal"
+}

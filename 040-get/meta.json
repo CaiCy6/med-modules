@@ -1,0 +1,21 @@
+{
+  "id": "040-get",
+  "title": "【医学图像分割模块】GET —— GET: Generative Embedding Translation for Medical Image Segm",
+  "tags": [
+    "医学图像分割",
+    "GET",
+    "模块",
+    "即插即用",
+    "PyTorch"
+  ],
+  "venue": "ECCV 2026",
+  "paper": "https://arxiv.org/abs/2608.22619v1",
+  "code": "",
+  "files": [
+    "demo.py",
+    "figure.png",
+    "get.py",
+    "readme.md"
+  ],
+  "name": "Get"
+}

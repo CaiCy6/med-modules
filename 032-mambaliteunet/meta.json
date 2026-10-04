@@ -1,0 +1,21 @@
+{
+  "id": "032-mambaliteunet",
+  "title": "【医学图像分割模块】MambaLiteUNet —— MambaLiteUNet: Cross-Gated Adaptive Feature Fusion for Robus",
+  "tags": [
+    "医学图像分割",
+    "MambaLiteUNet",
+    "模块",
+    "即插即用",
+    "PyTorch"
+  ],
+  "venue": "CVPR 2026",
+  "paper": "https://arxiv.org/abs/2604.20286v1",
+  "code": "https://github.com/maklachur/MambaLiteUNet",
+  "files": [
+    "demo.py",
+    "figure.png",
+    "mambaliteunet.py",
+    "readme.md"
+  ],
+  "name": "Mambaliteunet"
+}

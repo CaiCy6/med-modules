@@ -1,0 +1,21 @@
+{
+  "id": "017-dual",
+  "title": "【医学图像分割模块】Dual —— Dual-Adaptive SAM3: Hierarchical Routing over Low-Rank Exper",
+  "tags": [
+    "医学图像分割",
+    "Dual",
+    "模块",
+    "即插即用",
+    "PyTorch"
+  ],
+  "venue": "MICCAI 2026",
+  "paper": "https://arxiv.org/abs/2607.02571v1",
+  "code": "",
+  "files": [
+    "demo.py",
+    "dual.py",
+    "figure.png",
+    "readme.md"
+  ],
+  "name": "Dual"
+}

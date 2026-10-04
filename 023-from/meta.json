@@ -1,0 +1,21 @@
+{
+  "id": "023-from",
+  "title": "【医学图像分割模块】From Adaptation to Generalization —— From Adaptation to Generalization: Adaptive Visual Prompting",
+  "tags": [
+    "医学图像分割",
+    "From Adaptation to Generalization",
+    "模块",
+    "即插即用",
+    "PyTorch"
+  ],
+  "venue": "CVPR 2026",
+  "paper": "https://arxiv.org/abs/2604.17455v1",
+  "code": "",
+  "files": [
+    "demo.py",
+    "figure.png",
+    "from.py",
+    "readme.md"
+  ],
+  "name": "From"
+}

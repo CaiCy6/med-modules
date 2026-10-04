@@ -1,0 +1,21 @@
+{
+  "id": "018-mask",
+  "title": "【医学图像分割模块】Mask to Concept —— Mask to Concept: Auto-Promptable SAM3 via Efficient Test-Tim",
+  "tags": [
+    "医学图像分割",
+    "Mask to Concept",
+    "模块",
+    "即插即用",
+    "PyTorch"
+  ],
+  "venue": "MICCAI 2026",
+  "paper": "https://arxiv.org/abs/2606.26711v2",
+  "code": "",
+  "files": [
+    "demo.py",
+    "figure.png",
+    "mask.py",
+    "readme.md"
+  ],
+  "name": "Mask"
+}

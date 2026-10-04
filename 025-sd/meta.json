@@ -1,0 +1,21 @@
+{
+  "id": "025-sd",
+  "title": "【医学图像分割模块】SD —— SD-FSMIS: Adapting Stable Diffusion for Few-Shot Medical Ima",
+  "tags": [
+    "医学图像分割",
+    "SD",
+    "模块",
+    "即插即用",
+    "PyTorch"
+  ],
+  "venue": "CVPR 2026",
+  "paper": "https://arxiv.org/abs/2604.03134v2",
+  "code": "",
+  "files": [
+    "demo.py",
+    "figure.png",
+    "readme.md",
+    "sd.py"
+  ],
+  "name": "Sd"
+}

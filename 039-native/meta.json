@@ -1,0 +1,21 @@
+{
+  "id": "039-native",
+  "title": "【医学图像分割模块】Native —— Native-Space 3D CarveMix for Multi-Site T1w Stroke Segmentat",
+  "tags": [
+    "医学图像分割",
+    "Native",
+    "模块",
+    "即插即用",
+    "PyTorch"
+  ],
+  "venue": "MICCAI 2026",
+  "paper": "https://arxiv.org/abs/2608.23882v1",
+  "code": "",
+  "files": [
+    "demo.py",
+    "figure.png",
+    "native.py",
+    "readme.md"
+  ],
+  "name": "Native"
+}

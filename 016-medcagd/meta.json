@@ -1,0 +1,21 @@
+{
+  "id": "016-medcagd",
+  "title": "【医学图像分割模块】MedCAGD —— MedCAGD: Context-Aware Gated Decoder for Efficient Medical I",
+  "tags": [
+    "医学图像分割",
+    "MedCAGD",
+    "模块",
+    "即插即用",
+    "PyTorch"
+  ],
+  "venue": "ECCV 2026",
+  "paper": "https://arxiv.org/abs/2607.00409v1。",
+  "code": "https://github.com/MedVision/MedCAGD-plug-and-play",
+  "files": [
+    "demo.py",
+    "figure.png",
+    "medcagd.py",
+    "readme.md"
+  ],
+  "name": "Medcagd"
+}

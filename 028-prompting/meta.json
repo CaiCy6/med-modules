@@ -1,0 +1,21 @@
+{
+  "id": "028-prompting",
+  "title": "【医学图像分割模块】Prompting Segment Anything Model with Do —— Prompting Segment Anything Model with Domain-Adaptive Protot",
+  "tags": [
+    "医学图像分割",
+    "Prompting Segment Anything Model with Do",
+    "模块",
+    "即插即用",
+    "PyTorch"
+  ],
+  "venue": "MICCAI 2024",
+  "paper": "https://arxiv.org/abs/2409.12522v1",
+  "code": "",
+  "files": [
+    "demo.py",
+    "figure.png",
+    "prompting.py",
+    "readme.md"
+  ],
+  "name": "Prompting"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "013-multimodal",
+  "title": "【医学图像分割模块】Multimodal Routing and Region Refinement —— Multimodal Routing and Region Refinement for Language-Guided",
+  "tags": [
+    "医学图像分割",
+    "Multimodal Routing and Region Refinement",
+    "模块",
+    "即插即用",
+    "PyTorch"
+  ],
+  "venue": "MICCAI 2026",
+  "paper": "https://arxiv.org/abs/2609.28860v1",
+  "code": "https://github.com/medvision-plugins/multimodal-routing-region-refinement",
+  "files": [
+    "demo.py",
+    "figure.png",
+    "meta.json",
+    "multimodal.py",
+    "readme.md"
+  ],
+  "name": "Multimodal"
+}

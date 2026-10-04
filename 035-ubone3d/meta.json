@@ -1,0 +1,21 @@
+{
+  "id": "035-ubone3d",
+  "title": "【医学图像分割模块】UBone3D —— UBone3D: Physics-Rectified Conditional Flow Matching for Ana",
+  "tags": [
+    "医学图像分割",
+    "UBone3D",
+    "模块",
+    "即插即用",
+    "PyTorch"
+  ],
+  "venue": "ECCV 2026",
+  "paper": "https://arxiv.org/abs/2609.11506v1",
+  "code": "",
+  "files": [
+    "demo.py",
+    "figure.png",
+    "readme.md",
+    "ubone3d.py"
+  ],
+  "name": "Ubone3d"
+}

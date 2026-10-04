@@ -1,0 +1,21 @@
+{
+  "id": "022-harmonized",
+  "title": "【医学图像分割模块】Harmonized Feature Conditioning and Freq —— Harmonized Feature Conditioning and Frequency-Prompt Persona",
+  "tags": [
+    "医学图像分割",
+    "Harmonized Feature Conditioning and Freq",
+    "模块",
+    "即插即用",
+    "PyTorch"
+  ],
+  "venue": "CVPR 2026",
+  "paper": "https://arxiv.org/abs/2605.08210v1",
+  "code": "",
+  "files": [
+    "demo.py",
+    "figure.png",
+    "harmonized.py",
+    "readme.md"
+  ],
+  "name": "Harmonized"
+}

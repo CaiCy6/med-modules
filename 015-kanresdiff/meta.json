@@ -1,0 +1,21 @@
+{
+  "id": "015-kanresdiff",
+  "title": "【医学图像分割模块】KANResDiff —— KANResDiff: Learning Local Residual Diffusion via Kolmogorov",
+  "tags": [
+    "医学图像分割",
+    "KANResDiff",
+    "模块",
+    "即插即用",
+    "PyTorch"
+  ],
+  "venue": "MICCAI 2026",
+  "paper": "https://arxiv.org/abs/2608.11617v1",
+  "code": "",
+  "files": [
+    "demo.py",
+    "figure.png",
+    "kanresdiff.py",
+    "readme.md"
+  ],
+  "name": "Kanresdiff"
+}

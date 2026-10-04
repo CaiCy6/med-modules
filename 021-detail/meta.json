@@ -1,0 +1,21 @@
+{
+  "id": "021-detail",
+  "title": "【医学图像分割模块】Detail Consistent Stage —— Detail Consistent Stage-Wise Distillation for Efficient 3D M",
+  "tags": [
+    "医学图像分割",
+    "Detail Consistent Stage",
+    "模块",
+    "即插即用",
+    "PyTorch"
+  ],
+  "venue": "MICCAI 2026",
+  "paper": "https://arxiv.org/abs/2605.26382v1",
+  "code": "",
+  "files": [
+    "demo.py",
+    "detail.py",
+    "figure.png",
+    "readme.md"
+  ],
+  "name": "Detail"
+}

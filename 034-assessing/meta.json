@@ -1,0 +1,21 @@
+{
+  "id": "034-assessing",
+  "title": "【医学图像分割模块】Assessing nnU —— Assessing nnU-Net Generalization across Brain Tumor Populati",
+  "tags": [
+    "医学图像分割",
+    "Assessing nnU",
+    "模块",
+    "即插即用",
+    "PyTorch"
+  ],
+  "venue": "MICCAI 2026",
+  "paper": "https://arxiv.org/abs/2609.15524v1",
+  "code": "",
+  "files": [
+    "assessing.py",
+    "demo.py",
+    "figure.png",
+    "readme.md"
+  ],
+  "name": "Assessing"
+}

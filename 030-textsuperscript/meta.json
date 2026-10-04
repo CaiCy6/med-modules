@@ -1,0 +1,21 @@
+{
+  "id": "030-textsuperscript",
+  "title": "【医学图像分割模块】M\\textsuperscript{4}Fuse —— M\\textsuperscript{4}Fuse: Lightweight State-Space MoE with a",
+  "tags": [
+    "医学图像分割",
+    "M\\textsuperscript{4}Fuse",
+    "模块",
+    "即插即用",
+    "PyTorch"
+  ],
+  "venue": "CVPR 2026",
+  "paper": "https://arxiv.org/abs/2605.02444v1",
+  "code": "",
+  "files": [
+    "demo.py",
+    "figure.png",
+    "readme.md",
+    "textsuperscript.py"
+  ],
+  "name": "Textsuperscript"
+}

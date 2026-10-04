@@ -1,0 +1,21 @@
+{
+  "id": "029-cc",
+  "title": "【医学图像分割模块】CC —— CC-SAM: SAM with Cross-feature Attention and Context for Ult",
+  "tags": [
+    "医学图像分割",
+    "CC",
+    "模块",
+    "即插即用",
+    "PyTorch"
+  ],
+  "venue": "ECCV 2024",
+  "paper": "https://arxiv.org/abs/2408.00181v1",
+  "code": "",
+  "files": [
+    "cc.py",
+    "demo.py",
+    "figure.png",
+    "readme.md"
+  ],
+  "name": "Cc"
+}

@@ -1,0 +1,22 @@
+{
+  "id": "014-multi",
+  "title": "【医学图像分割模块】Multi —— Multi-Stage Prompt-Guided Feature Modulation for Generalizab",
+  "tags": [
+    "医学图像分割",
+    "Multi",
+    "模块",
+    "即插即用",
+    "PyTorch"
+  ],
+  "venue": "MICCAI 2026",
+  "paper": "https://arxiv.org/abs/2608.23745v1",
+  "code": "",
+  "files": [
+    "demo.py",
+    "figure.png",
+    "meta.json",
+    "multi.py",
+    "readme.md"
+  ],
+  "name": "Multi"
+}
