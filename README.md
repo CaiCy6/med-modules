@@ -35,4 +35,4 @@
 
 医学图像分割 / 算法代码 —— 公众号 **MediVision**。
 
-> 📚 **模块索引（自动生成）**：[INDEX.md](INDEX.md)
+> 📚 **模块索引**：[INDEX.md](INDEX.md)
