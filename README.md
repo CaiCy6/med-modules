@@ -16,6 +16,8 @@
 | 002 | **BiFormer** | CVPR 2023 | 双层路由注意力，只算「该算的地方」 | [`002-biformer`](./002-biformer) |
 | 003 | **DG-GSS** | arXiv 2026 | 方向-组图选择性扫描，让轻量分割网络「扫」得更聪明 | [`003-dg-gss`](./003-dg-gss) |
 | 004 | **StarNet** | CVPR 2024 | 星操作（元素级乘法），把「相加」换成「相乘」 | [`004-starnet`](./004-starnet) |
+| 013 | **Multimodal** | MICCAI 2026 |  | [`013-multimodal`](./013-multimodal) |
+| 014 | **Multi** | MICCAI 2026 |  | [`014-multi`](./014-multi) |
 <!-- CATALOG:END -->
 
 ## 单个模块文件夹结构
