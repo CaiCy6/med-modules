@@ -1,0 +1,22 @@
+{
+  "id": "004-starnet",
+  "title": "【医学图像分割模块】StarNet —— 星操作（元素级乘法）—— 把\"相加\"换成\"相乘\"的轻量卷积块",
+  "tags": [
+    "医学图像分割",
+    "StarNet",
+    "轻量化",
+    "模块",
+    "PyTorch"
+  ],
+  "venue": "CVPR 2024",
+  "paper": "https://arxiv.org/abs/2403.19967",
+  "code": "https://github.com/ma-xu/Rewrite-the-Stars",
+  "files": [
+    "demo.py",
+    "figure.png",
+    "meta.json",
+    "readme.md",
+    "starnet.py"
+  ],
+  "name": "StarNet"
+}
