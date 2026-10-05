@@ -1,0 +1,21 @@
+{
+  "id": "005-repvit",
+  "title": "【医学图像分割模块】RepViT —— 重参数化 ViT 块 —— 用结构重参数化把 ViT 搬到移动端",
+  "tags": [
+    "医学图像分割",
+    "RepViT",
+    "轻量化",
+    "模块",
+    "PyTorch"
+  ],
+  "venue": "CVPR 2024",
+  "paper": "https://arxiv.org/abs/2307.09283",
+  "code": "https://github.com/THU-MIG/RepViT",
+  "files": [
+    "demo.py",
+    "figure.png",
+    "readme.md",
+    "repvit.py"
+  ],
+  "name": "RepViT"
+}
