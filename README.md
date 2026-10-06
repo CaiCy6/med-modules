@@ -17,6 +17,7 @@
 | 003 | **DG-GSS** | arXiv 2026 | 方向-组图选择性扫描，让轻量分割网络「扫」得更聪明 | [`003-dg-gss`](./003-dg-gss) |
 | 004 | **StarNet** | CVPR 2024 | 星操作（元素级乘法），把「相加」换成「相乘」 | [`004-starnet`](./004-starnet) |
 | 005 | **RepViT** | CVPR 2024 |  | [`005-repvit`](./005-repvit) |
+| 006 | **Rmt** | CVPR 2023 |  | [`006-rmt`](./006-rmt) |
 | 013 | **Multimodal** | MICCAI 2026 | 图文动态路由+区域细化，每个图文对走自己的融合路径 | [`013-multimodal`](./013-multimodal) |
 | 014 | **Multi** | MICCAI 2026 | 多阶段提示引导的特征调制，按提示逐级校准泛化分割 | [`014-multi`](./014-multi) |
 | 015 | **Kanresdiff** | MICCAI 2026 | KAN 局部残差扩散，把残差学习塞进可插拔扩散块 | [`015-kanresdiff`](./015-kanresdiff) |

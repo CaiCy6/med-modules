@@ -1,8 +1,8 @@
 # 医学图像分割 · 即插即用模块合集 —— 索引
 
-> 最后更新：2026-10-04 20:35:18+0800
+> 最后更新：2026-10-06 10:30:18+0800
 
-**总计 34 个模块** ｜ 已发布 4 ｜ 待发布 30
+**总计 36 个模块** ｜ 已发布 5 ｜ 待发布 31
 
 ## 索引总表
 
@@ -12,6 +12,8 @@
 | 002 | BiFormer | CVPR 2023 | 2026-10-02 | published | [csdn](https://blog.csdn.net/m0_66049958/article/details/166994956) |
 | 003 | DG-GSS | arXiv 2026 | 2026-10-03 | published | [csdn](https://blog.csdn.net/m0_66049958/article/details/167031077)、[juejin](https://juejin.cn/spost/7691345821565452315) |
 | 004 | StarNet | CVPR 2024 | 2026-10-04 | published | [csdn](https://blog.csdn.net/m0_66049958/article/details/167081386) |
+| 005 | RepViT | CVPR 2024 | 2026-10-05 | published | [csdn](https://blog.csdn.net/m0_66049958/article/details/167122777)、[juejin](https://juejin.cn/spost/7692852483445866522)、[zhihu](https://zhuanlan.zhihu.com/p/2090467417394880546) |
+| 006 | Rmt | CVPR 2023 | 2026-10-06 | built | — |
 | 013 | Multimodal | MICCAI 2026 | 2026-10-04 | built | — |
 | 014 | Multi | MICCAI 2026 | 2026-10-04 | built | — |
 | 015 | Kanresdiff | MICCAI 2026 | 2026-10-04 | built | — |
@@ -45,7 +47,7 @@
 
 ## 已占用模块（新建前查重名单）
 
-`001fasternet` · `002biformer` · `003dggss` · `004starnet` · `013multimodal` · `014multi` · `015kanresdiff` · `016medcagd` · `017dual` · `018mask` · `019attention` · `020hadbalance` · `021detail` · `022harmonized` · `023from` · `024gated` · `025sd` · `026spegc` · `027medal` · `028prompting` · `029cc` · `030textsuperscript` · `031uni` · `032mambaliteunet` · `033neuroseg` · `034assessing` · `035ubone3d` · `036latent` · `037evaluating` · `038improving` · `039native` · `040get` · `041when` · `042inference` · `assessing` · `attention` · `biformer` · `cc` · `detail` · `dggss` · `dual` · `evaluating` · `fasternet` · `from` · `gated` · `get` · `hadbalance` · `harmonized` · `improving` · `inference` · `kanresdiff` · `latent` · `mambaliteunet` · `mask` · `medal` · `medcagd` · `multi` · `multimodal` · `native` · `neuroseg` · `pconv` · `prompting` · `sd` · `spegc` · `starnet` · `textsuperscript` · `ubone3d` · `uni` · `when`
+`001fasternet` · `002biformer` · `003dggss` · `004starnet` · `005repvit` · `006rmt` · `013multimodal` · `014multi` · `015kanresdiff` · `016medcagd` · `017dual` · `018mask` · `019attention` · `020hadbalance` · `021detail` · `022harmonized` · `023from` · `024gated` · `025sd` · `026spegc` · `027medal` · `028prompting` · `029cc` · `030textsuperscript` · `031uni` · `032mambaliteunet` · `033neuroseg` · `034assessing` · `035ubone3d` · `036latent` · `037evaluating` · `038improving` · `039native` · `040get` · `041when` · `042inference` · `assessing` · `attention` · `biformer` · `cc` · `detail` · `dggss` · `dual` · `evaluating` · `fasternet` · `from` · `gated` · `get` · `hadbalance` · `harmonized` · `improving` · `inference` · `kanresdiff` · `latent` · `mambaliteunet` · `mask` · `medal` · `medcagd` · `multi` · `multimodal` · `native` · `neuroseg` · `pconv` · `prompting` · `repvit` · `rmt` · `sd` · `spegc` · `starnet` · `textsuperscript` · `ubone3d` · `uni` · `when`
 
 ## 明细
 
@@ -77,6 +79,21 @@
 - 本地：`modules/004-starnet/` ｜ 仓库：https://github.com/CaiCy6/med-modules/tree/main/004-starnet
 - 首建：2026-10-04 ｜ 状态：published
   - csdn · published · 2026-10-04 · https://blog.csdn.net/m0_66049958/article/details/167081386
+
+### 005-repvit · RepViT
+- 标题：【医学图像分割模块】RepViT —— 重参数化 ViT 块 —— 用结构重参数化把 ViT 搬到移动端
+- 出处：CVPR 2024 ｜ 论文：https://arxiv.org/abs/2307.09283 ｜ 官方码：https://github.com/THU-MIG/RepViT
+- 本地：`modules/005-repvit/` ｜ 仓库：https://github.com/CaiCy6/med-modules/tree/main/005-repvit
+- 首建：2026-10-05 ｜ 状态：published
+  - csdn · published · 2026-10-05 · https://blog.csdn.net/m0_66049958/article/details/167122777
+  - juejin · submitted · 2026-10-05 · https://juejin.cn/spost/7692852483445866522
+  - zhihu · draft · 2026-10-05 · https://zhuanlan.zhihu.com/p/2090467417394880546
+
+### 006-rmt · Rmt
+- 标题：【医学图像分割模块】RMT —— 保留注意力 —— 给视觉 Transformer 加一个"显式记忆"
+- 出处：CVPR 2023 ｜ 论文：https://arxiv.org/abs/2303.17164 ｜ 官方码：https://github.com/qhfan/RMT
+- 本地：`modules/006-rmt/` ｜ 仓库：https://github.com/CaiCy6/med-modules/tree/main/006-rmt
+- 首建：2026-10-06 ｜ 状态：built
 
 ### 013-multimodal · Multimodal
 - 标题：【医学图像分割模块】Multimodal Routing and Region Refinement —— Multimodal Routing and Region Refinement for Language-Guided

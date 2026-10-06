@@ -1,0 +1,21 @@
+{
+  "id": "006-rmt",
+  "title": "【医学图像分割模块】RMT —— 保留注意力 —— 给视觉 Transformer 加一个\"显式记忆\"",
+  "tags": [
+    "医学图像分割",
+    "RMT",
+    "轻量化",
+    "模块",
+    "PyTorch"
+  ],
+  "venue": "CVPR 2023",
+  "paper": "https://arxiv.org/abs/2303.17164",
+  "code": "https://github.com/qhfan/RMT",
+  "files": [
+    "demo.py",
+    "figure.png",
+    "readme.md",
+    "rmt.py"
+  ],
+  "name": "Rmt"
+}
