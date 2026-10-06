@@ -4,12 +4,13 @@
   "tags": [
     "医学图像分割",
     "RMT",
-    "轻量化",
+    "注意力机制",
+    "长程依赖",
     "模块",
     "PyTorch"
   ],
-  "venue": "CVPR 2023",
-  "paper": "https://arxiv.org/abs/2303.17164",
+  "venue": "CVPR 2024",
+  "paper": "https://arxiv.org/abs/2309.11523",
   "code": "https://github.com/qhfan/RMT",
   "files": [
     "demo.py",
@@ -17,5 +18,5 @@
     "readme.md",
     "rmt.py"
   ],
-  "name": "Rmt"
+  "name": "RMT"
 }

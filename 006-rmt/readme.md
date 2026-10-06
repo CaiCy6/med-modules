@@ -1,127 +1,127 @@
 ## 一、论文出处
 
-- 论文全名：*Retentive Network: A Successor to Transformer for Large Language Models*（RMT 即 Retentive Network 的保留机制，本文讲解其可插拔的保留注意力子模块）
-- 会议/年份：arXiv 2023（CVPR 2023 收录的相关工作，本模块以 arXiv 2303.17164 为准）
-- 论文链接：https://arxiv.org/abs/2303.17164
+- 论文全名：*RMT: Retentive Networks Meet Vision Transformers*
+- 会议/年份：CVPR 2024
+- 论文链接：https://arxiv.org/abs/2309.11523
 - 官方代码：https://github.com/qhfan/RMT
 
-> 说明：RMT 的完整框架是面向序列建模的保留网络，但本合集只取其中可单独塞进 U-Net 的**保留注意力块（Retention Block）**来讲——它是一个带显式衰减的线性注意力子模块，能替换掉标准自注意力里的 softmax 注意力。
+> 说明：RMT 把 NLP 里 Retentive Network（RetNet）的「显式衰减」思想搬进视觉骨干，提出 **Manhattan Self-Attention（MaSA，曼哈顿自注意力）**——用与曼哈顿距离挂钩的二维空间衰减矩阵，给 ViT 补上一个显式的空间先验。本合集只取其中可插拔的 **RMT Block / MaSA** 来讲。
 
-## 二、模块图（截自论文原文）
+## 二、模块图（截自论文原文 Figure 3）
 
 ![RMT 结构图](figure.png)
 
-图注：保留注意力用「位置相关的指数衰减」替代 softmax 归一化，让每个 token 对历史信息的权重随距离单调衰减，从而在 O(N) 复杂度下保留长程记忆。
+图注：RMT 整体四阶段架构（上）；下为 RMT Block 展开——`DWConv 3×3 → LN → Manhattan Self-Attention → LN → FFN`，两条残差。MaSA 用一个按曼哈顿距离衰减的矩阵 `D` 调制注意力权重，让空间先验「显式」地进入模型。
 
 ## 三、核心思想与作用
 
-一句话总括：**保留注意力把 softmax 注意力换成「带显式衰减权重的线性注意力」，用可学习或固定的衰减系数给远距离 token 降权，既保住长程依赖，又把复杂度从 O(N²) 压到 O(N)。**
+一句话总括：**MaSA 在标准自注意力 `Softmax(QKᵀ)V` 外面乘上一个按「曼哈顿距离」指数衰减的矩阵 `D`，让离得近的 token 权重大、离得远的 token 权重指数级变小，从而给模型一个显式的二维空间先验——注意力算的还是全局的，但先验告诉它「谁更重要」。**
 
 拆解成几步：
 
-1. **去掉 softmax，改成线性形式**。标准注意力是 `softmax(QKᵀ)V`，必须先算 N×N 的注意力矩阵。保留注意力把它写成 `(QKᵀ ⊙ D)V`，其中 D 是一个只和相对位置有关的衰减矩阵，于是可以先用结合律算 `KᵀV`，再乘 Q，复杂度降到线性。
-2. **引入显式衰减 D**。D 的元素是 `γ^(i-j)`（i≥j），γ 是衰减因子（0<γ<1）。距离越远，权重越小，相当于给模型一个「记忆会随时间淡忘」的先验。
-3. **多头 + 分组归一化**。每个头有独立的 γ，输出前做一次 GroupNorm 稳定训练，避免线性注意力常见的数值漂移。
-4. **可插拔**。整个块只依赖输入张量，不依赖序列长度以外的假设，所以能直接替换 U-Net 里的自注意力或注意力门控。
+1. **从 RetNet 的「衰减」出发**。RetNet 在语言模型里用 `D_nm = γ^(n-m)`（n≥m，因果、一维）给历史 token 降权，带来显式的时序先验。RMT 把这个思想迁移到视觉。
+2. **从一维到二维：曼哈顿距离**。图像里每个 token 有 (x, y) 坐标，RMT 把衰减改成按 **曼哈顿距离** 计算：`D_nm = γ^(|xₙ-xₘ| + |yₙ-yₘ|)`。距离越远，衰减越狠，且横竖两个方向分别累积——这就是「Manhattan」的由来。
+3. **注意力公式**：`MaSA(X) = (Softmax(QKᵀ) ⊙ D) · V`。注意一个反直觉的点：RMT 试验后发现**去掉 RetNet 的门控（gating）、保留 Softmax** 反而在视觉上更好——所以 MaSA 并没有像很多线性注意力那样把 softmax 干掉，而是「Softmax 注意力 × 空间衰减」。
+4. **可分解（Decomposed MaSA）**。前三个阶段用分解版：把注意力得分与衰减矩阵沿横、纵两个轴分别拆开算（`Attn_H`、`Attn_W`），再接 `DWConv` 的局部上下文增强（LCE），在保留显式空间先验的同时把早期阶段的开销压下来；最后一个阶段用原始 MaSA。整个 Block 就是「DWConv → LN → MaSA → LN → FFN」。
 
 为什么好：
 
-- **线性复杂度**：医学图像里特征图展平后 token 数很大（如 64×64=4096），O(N²) 注意力显存吃不消，保留注意力能扛住。
-- **显式长程建模**：衰减是「软」的，不是硬截断，远处信息仍以较小权重参与，比局部窗口注意力更接近全局感受野。
-- **训练稳定**：GroupNorm + 固定/可学习 γ，比纯线性注意力好训，不容易梯度爆炸。
+- **显式空间先验**。普通 ViT 的自注意力天生没有任何空间归纳偏置，RMT 用衰减矩阵把「距离近的更相关」直接写进注意力，比纯数据学出来的位置关系更稳。
+- **保留 Softmax 的非线性**。不像线性注意力为了省算力丢掉 softmax，MaSA 保留 softmax，实验上精度更好。
+- **全局感受野 + 局部增强**。曼哈顿衰减负责长程的「软」加权，DWConv(LCE) 补局部纹理，粗细结合。
+- **即插即用**。Block 只依赖特征张量，可整块替换进现有 ViT / U-Net 的注意力位置。
 
 ## 四、在 U-Net 里的插入位置
 
-推荐放在**瓶颈层（bottleneck）**，其次可放在**解码器的高层**。
+推荐放在**瓶颈层（bottleneck）**，其次可放在**解码器的高层（低分辨率层）**。
 
 理由：
 
-- 瓶颈层特征图空间尺寸最小、通道数最多，展平后 token 数适中，保留注意力的线性优势最明显，且这里最需要全局上下文来补足卷积的局部性。
-- 解码器高层（靠近输出、分辨率较低的那几层）同样适合，能帮模型在恢复空间细节前先整合全局信息。
-- 不建议放在编码器浅层：那里分辨率高、token 多，线性注意力虽然省显存，但浅层更依赖局部纹理，全局衰减收益有限，反而增加计算。
+- 瓶颈层特征图最小、通道最多，全局建模需求最强，而这里正是把「显式空间先验」发挥出来的地方——医学图像里器官/病灶的空间关系是先验知识，用曼哈顿衰减天然贴合。
+- 解码器低分辨率层同样适合，能在恢复空间细节前先整合全局上下文。
+- 不建议放在编码器浅层：那里分辨率高、token 多，自注意力本身开销大（分解版可缓解），且浅层更依赖局部纹理。
 
 一句话：**瓶颈层放一个，解码器低分辨率层可选放，编码器浅层别放。**
 
 ## 五、复现代码（PyTorch，逐行中文注释）
 
-> 说明：以下是**简化教学版**，只保留保留注意力最核心的「衰减矩阵 + 线性注意力」两个组件，去掉了官方实现里的多头分组、跨头归一化等工程细节，方便理解结构。
+> 说明：以下是**简化教学版**，只保留 MaSA 最核心的「曼哈顿衰减矩阵 + 空间调制」两个组件，去掉了官方实现里的多头分组、分轴向分解、DWConv(LCE) 等工程细节，方便理解结构。
 
 ```python
 import torch
 import torch.nn as nn
-import torch.nn.functional as F
 
-class SimpleRetention(nn.Module):
-    """简化版保留注意力：带显式指数衰减的线性注意力"""
+class ManhattanSelfAttention(nn.Module):
+    """简化版曼哈顿自注意力：标准 softmax 注意力 × 曼哈顿距离衰减矩阵"""
     def __init__(self, dim, num_heads=4, gamma=0.9):
         super().__init__()
         self.dim = dim                      # 输入特征维度
         self.num_heads = num_heads          # 头数
-        self.head_dim = dim // num_heads    # 每个头的维度
-        self.gamma = gamma                  # 衰减因子，越接近 1 记忆越长
-        # Q、K、V 的线性投影
-        self.q_proj = nn.Linear(dim, dim)
-        self.k_proj = nn.Linear(dim, dim)
-        self.v_proj = nn.Linear(dim, dim)
+        self.head_dim = dim // num_heads    # 每头维度
+        self.gamma = gamma                  # 衰减因子，越接近 1 空间衰减越慢
+        self.q_proj = nn.Linear(dim, dim)   # Q 投影
+        self.k_proj = nn.Linear(dim, dim)   # K 投影
+        self.v_proj = nn.Linear(dim, dim)   # V 投影
         self.out_proj = nn.Linear(dim, dim) # 输出投影
-        self.norm = nn.GroupNorm(1, dim)    # 输出归一化，稳定训练
+        self.scale = self.head_dim ** -0.5  # softmax 缩放
 
-    def forward(self, x):
-        # x: (B, N, C)，N 是 token 数（如 H*W），C 是通道数
+    def forward(self, x, hw=None):
+        # x: (B, N, C)，N = H*W；hw=(H, W) 用于计算 token 的 (x, y) 坐标
         B, N, C = x.shape
         H = self.num_heads
         D = self.head_dim
-        # 投影并拆成多头: (B, H, N, D)
+        if hw is None:
+            Hh = int(N ** 0.5); hw = (Hh, Hh)
+        h, w = hw
+        assert h * w == N, 'token 数需等于 H*W'
+
+        # 多头投影: (B, H, N, D)
         q = self.q_proj(x).view(B, N, H, D).transpose(1, 2)
         k = self.k_proj(x).view(B, N, H, D).transpose(1, 2)
         v = self.v_proj(x).view(B, N, H, D).transpose(1, 2)
 
-        # 构造衰减矩阵 D_mat: (N, N)，D_mat[i, j] = gamma^(i-j) if i>=j else 0
-        idx = torch.arange(N, device=x.device)
-        # 相对距离 i-j，下三角为正
-        rel = idx[:, None] - idx[None, :]          # (N, N)
-        decay = torch.where(rel >= 0,
-                            self.gamma ** rel.clamp(min=0).float(),
-                            torch.zeros_like(rel, dtype=torch.float))
-        decay = decay.to(x.dtype)                  # (N, N)
+        # 标准自注意力得分: (B, H, N, N)
+        attn = (q @ k.transpose(-2, -1)) * self.scale
+        attn = attn.softmax(dim=-1)
 
-        # 线性注意力核心：先算 K^T V，再乘 Q，避免 N×N 的 QK^T
-        # 但为了显式衰减，这里用衰减加权的 K^T V 形式
-        # 简化写法：直接对 K 做衰减加权后再算注意力
-        # 权重 w[i,j] = decay[i,j]，对 j 做归一化
-        w = decay / (decay.sum(dim=-1, keepdim=True) + 1e-6)  # (N, N)
-        # 注意力输出: (B, H, N, D) = w @ v
-        out = torch.einsum('ij,bhjd->bhid', w, v)  # (B, H, N, D)
+        # 构造曼哈顿距离衰减矩阵 D_nm = gamma^(|xn-xm| + |yn-ym|)
+        ys = torch.arange(h, device=x.device).repeat_interleave(w)  # (N,)
+        xs = torch.arange(w, device=x.device).repeat(h)             # (N,)
+        dist = (ys[:, None] - ys[None, :]).abs() + (xs[:, None] - xs[None, :]).abs()  # (N, N)
+        decay = (self.gamma ** dist.float()).to(x.dtype)            # (N, N)
 
-        # 合并多头并投影
+        # 用空间衰减调制注意力权重，再做归一化
+        attn = attn * decay                      # (B, H, N, N) * (N, N)
+        attn = attn / (attn.sum(dim=-1, keepdim=True) + 1e-6)
+
+        # 加权聚合: (B, H, N, D)
+        out = attn @ v
+
+        # 合并多头 + 输出投影
         out = out.transpose(1, 2).reshape(B, N, C)
-        out = self.out_proj(out)
-        # 残差 + 归一化
-        out = self.norm(out.transpose(1, 2)).transpose(1, 2)
-        return out + x
+        return self.out_proj(out)
 ```
 
-> 注：上面为了可读性用了 `einsum` 显式构造 N×N 权重，实际部署时可用论文里的「分块递归」写法把复杂度真正压到 O(N)。教学版重点是理解**衰减矩阵**和**线性聚合**这两个概念。
+> 注：官方实现把上面的 `dist` 拆成横、纵两个一维衰减矩阵分别作用（Decomposed MaSA），并加了一个 `DWConv` 的局部上下文增强（LCE），早期阶段用它降开销。教学版把两步合成一步显式计算，重点是理解**「softmax 注意力 × 曼哈顿距离衰减」**这个核心设计。
 
 ## 六、插入示例（几行塞进你的网络）
 
 ```python
-# 假设你在 U-Net 瓶颈层有一个特征图 x: (B, C, H, W)
 from torch import nn
 
 class BottleneckWithRMT(nn.Module):
     def __init__(self, channels):
         super().__init__()
-        self.rmt = SimpleRetention(dim=channels, num_heads=4, gamma=0.9)
+        self.norm = nn.LayerNorm(channels)
+        self.masa = ManhattanSelfAttention(dim=channels, num_heads=4, gamma=0.9)
 
     def forward(self, x):
         B, C, H, W = x.shape
         # 展平成 token 序列: (B, H*W, C)
         tokens = x.flatten(2).transpose(1, 2)
-        tokens = self.rmt(tokens)                 # 保留注意力
+        tokens = tokens + self.masa(self.norm(tokens), hw=(H, W))  # 残差
         # 还原回特征图
-        out = tokens.transpose(1, 2).view(B, C, H, W)
-        return out
+        return tokens.transpose(1, 2).view(B, C, H, W)
 
 # 用法：替换掉 U-Net 瓶颈层的普通卷积或自注意力
 # bottleneck = BottleneckWithRMT(512)
@@ -129,12 +129,11 @@ class BottleneckWithRMT(nn.Module):
 
 ## 七、实测经验与注意点
 
-- **衰减因子 γ 是关键超参**：γ 越接近 1，记忆越长但远距离噪声也越多；医学图像里建议从 0.9 附近试起，分割任务可略小（0.8~0.9），分类可略大。
-- **token 数别太大**：瓶颈层展平后 token 数控制在 1k~4k 比较舒服，超过 8k 即使线性注意力也会因中间张量吃显存，建议先下采样。
-- **GroupNorm 别省**：线性注意力没有 softmax 的数值归一化，去掉 GroupNorm 后训练容易发散，这是官方实现里明确保留的组件。
-- **和卷积互补**：保留注意力擅长全局，卷积擅长局部，瓶颈层用「卷积 + 保留注意力」并联或串联，比单独替换效果更稳。
+- **γ（衰减因子）是关键超参**：越接近 1，空间衰减越慢、感受野越大但远距离噪声也越多；建议从 0.9 附近试起，分割任务可略小（0.8~0.9）。
+- **token 数别太大**：原始 MaSA 是 O(N²) 的（毕竟保留了 softmax），瓶颈层展平后 token 数控制在 1k~4k 比较舒服；token 再多就上分解版 MaSA。
+- **不要盲目去掉 Softmax**：RMT 的实验显示，视觉任务上保留 softmax 反而比换成 RetNet 的门控更好——这点和很多「线性注意力」教程的直觉相反，别照搬。
+- **和卷积互补**：曼哈顿衰减负责长程加权，DWConv(LCE) 负责局部，俩一起用比只换注意力更稳。
 - **别在浅层硬塞**：编码器浅层分辨率高、token 多，收益低开销大，优先放瓶颈和解码器低分辨率层。
-- **复杂度**：教学版是 O(N²) 的显式写法，工程版用分块递归可做到 O(N)，部署时注意区分。
 
 ## 八、完整工程
 
