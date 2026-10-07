@@ -1,0 +1,21 @@
+{
+  "id": "007-gfnet",
+  "title": "【医学图像分割模块】GFNet —— 全局滤波器网络 —— 用 FFT 在频域做\"全局混频\"",
+  "tags": [
+    "医学图像分割",
+    "GFNet",
+    "轻量化",
+    "模块",
+    "PyTorch"
+  ],
+  "venue": "",
+  "paper": "https://arxiv.org/abs/2107.00645",
+  "code": "https://github.com/raoyongming/GFNet",
+  "files": [
+    "demo.py",
+    "figure.png",
+    "gfnet.py",
+    "readme.md"
+  ],
+  "name": "Gfnet"
+}
