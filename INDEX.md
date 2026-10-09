@@ -1,8 +1,8 @@
 # 医学图像分割 · 即插即用模块合集 —— 索引
 
-> 最后更新：2026-10-07 10:30:14+0800
+> 最后更新：2026-10-09 10:30:14+0800
 
-**总计 37 个模块** ｜ 已发布 6 ｜ 待发布 31
+**总计 38 个模块** ｜ 已发布 6 ｜ 待发布 32
 
 ## 索引总表
 
@@ -15,6 +15,7 @@
 | 005 | RepViT | CVPR 2024 | 2026-10-05 | published | [csdn](https://blog.csdn.net/m0_66049958/article/details/167122777)、[juejin](https://juejin.cn/spost/7692852483445866522)、[zhihu](https://zhuanlan.zhihu.com/p/2090467417394880546) |
 | 006 | RMT | CVPR 2024 | 2026-10-06 | published | [csdn](https://blog.csdn.net/m0_66049958/article/details/167168953) |
 | 007 | Gfnet |  | 2026-10-07 | built | — |
+| 008 | Vmamba | CVPR 2024 | 2026-10-09 | built | — |
 | 013 | Multimodal | MICCAI 2026 | 2026-10-04 | built | — |
 | 014 | Multi | MICCAI 2026 | 2026-10-04 | built | — |
 | 015 | Kanresdiff | MICCAI 2026 | 2026-10-04 | built | — |
@@ -48,7 +49,7 @@
 
 ## 已占用模块（新建前查重名单）
 
-`001fasternet` · `002biformer` · `003dggss` · `004starnet` · `005repvit` · `006rmt` · `007gfnet` · `013multimodal` · `014multi` · `015kanresdiff` · `016medcagd` · `017dual` · `018mask` · `019attention` · `020hadbalance` · `021detail` · `022harmonized` · `023from` · `024gated` · `025sd` · `026spegc` · `027medal` · `028prompting` · `029cc` · `030textsuperscript` · `031uni` · `032mambaliteunet` · `033neuroseg` · `034assessing` · `035ubone3d` · `036latent` · `037evaluating` · `038improving` · `039native` · `040get` · `041when` · `042inference` · `assessing` · `attention` · `biformer` · `cc` · `detail` · `dggss` · `dual` · `evaluating` · `fasternet` · `from` · `gated` · `get` · `gfnet` · `hadbalance` · `harmonized` · `improving` · `inference` · `kanresdiff` · `latent` · `mambaliteunet` · `mask` · `medal` · `medcagd` · `multi` · `multimodal` · `native` · `neuroseg` · `pconv` · `prompting` · `repvit` · `rmt` · `sd` · `spegc` · `starnet` · `textsuperscript` · `ubone3d` · `uni` · `when`
+`001fasternet` · `002biformer` · `003dggss` · `004starnet` · `005repvit` · `006rmt` · `007gfnet` · `008vmamba` · `013multimodal` · `014multi` · `015kanresdiff` · `016medcagd` · `017dual` · `018mask` · `019attention` · `020hadbalance` · `021detail` · `022harmonized` · `023from` · `024gated` · `025sd` · `026spegc` · `027medal` · `028prompting` · `029cc` · `030textsuperscript` · `031uni` · `032mambaliteunet` · `033neuroseg` · `034assessing` · `035ubone3d` · `036latent` · `037evaluating` · `038improving` · `039native` · `040get` · `041when` · `042inference` · `assessing` · `attention` · `biformer` · `cc` · `detail` · `dggss` · `dual` · `evaluating` · `fasternet` · `from` · `gated` · `get` · `gfnet` · `hadbalance` · `harmonized` · `improving` · `inference` · `kanresdiff` · `latent` · `mambaliteunet` · `mask` · `medal` · `medcagd` · `multi` · `multimodal` · `native` · `neuroseg` · `pconv` · `prompting` · `repvit` · `rmt` · `sd` · `spegc` · `starnet` · `textsuperscript` · `ubone3d` · `uni` · `vmamba` · `when`
 
 ## 明细
 
@@ -102,6 +103,12 @@
 - 出处： ｜ 论文：https://arxiv.org/abs/2107.00645 ｜ 官方码：https://github.com/raoyongming/GFNet
 - 本地：`modules/007-gfnet/` ｜ 仓库：https://github.com/CaiCy6/med-modules/tree/main/007-gfnet
 - 首建：2026-10-07 ｜ 状态：built
+
+### 008-vmamba · Vmamba
+- 标题：【医学图像分割模块】VMamba —— 视觉状态空间（SS2D 四向扫描）—— 把 Mamba 的线性复杂度搬进视觉主干
+- 出处：CVPR 2024 ｜ 论文：https://arxiv.org/abs/2401.10166 ｜ 官方码：https://github.com/MzeroMiko/VMamba
+- 本地：`modules/008-vmamba/` ｜ 仓库：https://github.com/CaiCy6/med-modules/tree/main/008-vmamba
+- 首建：2026-10-09 ｜ 状态：built
 
 ### 013-multimodal · Multimodal
 - 标题：【医学图像分割模块】Multimodal Routing and Region Refinement —— Multimodal Routing and Region Refinement for Language-Guided

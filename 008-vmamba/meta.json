@@ -1,0 +1,22 @@
+{
+  "id": "008-vmamba",
+  "title": "【医学图像分割模块】VMamba —— 视觉状态空间（SS2D 四向扫描）—— 把 Mamba 的线性复杂度搬进视觉主干",
+  "tags": [
+    "医学图像分割",
+    "VMamba",
+    "轻量化",
+    "模块",
+    "PyTorch"
+  ],
+  "venue": "CVPR 2024",
+  "paper": "https://arxiv.org/abs/2401.10166",
+  "code": "https://github.com/MzeroMiko/VMamba",
+  "files": [
+    "demo.py",
+    "figure.png",
+    "meta.json",
+    "readme.md",
+    "vmamba.py"
+  ],
+  "name": "Vmamba"
+}
