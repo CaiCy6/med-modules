@@ -1,0 +1,21 @@
+{
+  "id": "009-unireplknet",
+  "title": "【医学图像分割模块】UniRepLKNet —— 膨胀重参数大核块（Dilated Reparam Block）—— 大核卷积又能训又能用",
+  "tags": [
+    "医学图像分割",
+    "UniRepLKNet",
+    "轻量化",
+    "模块",
+    "PyTorch"
+  ],
+  "venue": "CVPR 2024",
+  "paper": "https://arxiv.org/abs/2311.15599",
+  "code": "https://github.com/AILab-CVC/UniRepLKNet",
+  "files": [
+    "demo.py",
+    "figure.png",
+    "readme.md",
+    "unireplknet.py"
+  ],
+  "name": "Unireplknet"
+}
