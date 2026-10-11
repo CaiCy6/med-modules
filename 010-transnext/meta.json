@@ -1,0 +1,21 @@
+{
+  "id": "010-transnext",
+  "title": "【医学图像分割模块】TransNeXt —— 聚合注意力（Aggregated Attention）—— 像人眼一样做中心凹+周边视觉",
+  "tags": [
+    "医学图像分割",
+    "TransNeXt",
+    "轻量化",
+    "模块",
+    "PyTorch"
+  ],
+  "venue": "CVPR 2024",
+  "paper": "https://arxiv.org/abs/2311.17132",
+  "code": "https://github.com/DaiShiResearch/TransNeXt",
+  "files": [
+    "demo.py",
+    "figure.png",
+    "readme.md",
+    "transnext.py"
+  ],
+  "name": "Transnext"
+}

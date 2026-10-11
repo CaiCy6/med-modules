@@ -21,6 +21,7 @@
 | 007 | **Gfnet** |  |  | [`007-gfnet`](./007-gfnet) |
 | 008 | **Vmamba** | CVPR 2024 |  | [`008-vmamba`](./008-vmamba) |
 | 009 | **Unireplknet** | CVPR 2024 |  | [`009-unireplknet`](./009-unireplknet) |
+| 010 | **Transnext** | CVPR 2024 |  | [`010-transnext`](./010-transnext) |
 | 013 | **Multimodal** | MICCAI 2026 | 图文动态路由+区域细化，每个图文对走自己的融合路径 | [`013-multimodal`](./013-multimodal) |
 | 014 | **Multi** | MICCAI 2026 | 多阶段提示引导的特征调制，按提示逐级校准泛化分割 | [`014-multi`](./014-multi) |
 | 015 | **Kanresdiff** | MICCAI 2026 | KAN 局部残差扩散，把残差学习塞进可插拔扩散块 | [`015-kanresdiff`](./015-kanresdiff) |
