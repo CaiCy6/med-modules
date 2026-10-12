@@ -1,8 +1,8 @@
 # 医学图像分割 · 即插即用模块合集 —— 索引
 
-> 最后更新：2026-10-11 10:30:15+0800
+> 最后更新：2026-10-12 10:30:18+0800
 
-**总计 40 个模块** ｜ 已发布 6 ｜ 待发布 34
+**总计 41 个模块** ｜ 已发布 6 ｜ 待发布 35
 
 ## 索引总表
 
@@ -18,6 +18,7 @@
 | 008 | Vmamba | CVPR 2024 | 2026-10-09 | built | — |
 | 009 | Unireplknet | CVPR 2024 | 2026-10-10 | built | — |
 | 010 | Transnext | CVPR 2024 | 2026-10-11 | built | — |
+| 011 | Shvit | CVPR 2024 | 2026-10-12 | built | — |
 | 013 | Multimodal | MICCAI 2026 | 2026-10-04 | built | — |
 | 014 | Multi | MICCAI 2026 | 2026-10-04 | built | — |
 | 015 | Kanresdiff | MICCAI 2026 | 2026-10-04 | built | — |
@@ -51,7 +52,7 @@
 
 ## 已占用模块（新建前查重名单）
 
-`001fasternet` · `002biformer` · `003dggss` · `004starnet` · `005repvit` · `006rmt` · `007gfnet` · `008vmamba` · `009unireplknet` · `010transnext` · `013multimodal` · `014multi` · `015kanresdiff` · `016medcagd` · `017dual` · `018mask` · `019attention` · `020hadbalance` · `021detail` · `022harmonized` · `023from` · `024gated` · `025sd` · `026spegc` · `027medal` · `028prompting` · `029cc` · `030textsuperscript` · `031uni` · `032mambaliteunet` · `033neuroseg` · `034assessing` · `035ubone3d` · `036latent` · `037evaluating` · `038improving` · `039native` · `040get` · `041when` · `042inference` · `assessing` · `attention` · `biformer` · `cc` · `detail` · `dggss` · `dual` · `evaluating` · `fasternet` · `from` · `gated` · `get` · `gfnet` · `hadbalance` · `harmonized` · `improving` · `inference` · `kanresdiff` · `latent` · `mambaliteunet` · `mask` · `medal` · `medcagd` · `multi` · `multimodal` · `native` · `neuroseg` · `pconv` · `prompting` · `repvit` · `rmt` · `sd` · `spegc` · `starnet` · `textsuperscript` · `transnext` · `ubone3d` · `uni` · `unireplknet` · `vmamba` · `when`
+`001fasternet` · `002biformer` · `003dggss` · `004starnet` · `005repvit` · `006rmt` · `007gfnet` · `008vmamba` · `009unireplknet` · `010transnext` · `011shvit` · `013multimodal` · `014multi` · `015kanresdiff` · `016medcagd` · `017dual` · `018mask` · `019attention` · `020hadbalance` · `021detail` · `022harmonized` · `023from` · `024gated` · `025sd` · `026spegc` · `027medal` · `028prompting` · `029cc` · `030textsuperscript` · `031uni` · `032mambaliteunet` · `033neuroseg` · `034assessing` · `035ubone3d` · `036latent` · `037evaluating` · `038improving` · `039native` · `040get` · `041when` · `042inference` · `assessing` · `attention` · `biformer` · `cc` · `detail` · `dggss` · `dual` · `evaluating` · `fasternet` · `from` · `gated` · `get` · `gfnet` · `hadbalance` · `harmonized` · `improving` · `inference` · `kanresdiff` · `latent` · `mambaliteunet` · `mask` · `medal` · `medcagd` · `multi` · `multimodal` · `native` · `neuroseg` · `pconv` · `prompting` · `repvit` · `rmt` · `sd` · `shvit` · `spegc` · `starnet` · `textsuperscript` · `transnext` · `ubone3d` · `uni` · `unireplknet` · `vmamba` · `when`
 
 ## 明细
 
@@ -123,6 +124,12 @@
 - 出处：CVPR 2024 ｜ 论文：https://arxiv.org/abs/2311.17132 ｜ 官方码：https://github.com/DaiShiResearch/TransNeXt
 - 本地：`modules/010-transnext/` ｜ 仓库：https://github.com/CaiCy6/med-modules/tree/main/010-transnext
 - 首建：2026-10-11 ｜ 状态：built
+
+### 011-shvit · Shvit
+- 标题：【医学图像分割模块】SHViT —— 单头视觉 Transformer —— 砍掉多头冗余，做出又快又准的高效主干
+- 出处：CVPR 2024 ｜ 论文：https://arxiv.org/abs/2401.16456 ｜ 官方码：https://github.com/ysj9909/SHViT
+- 本地：`modules/011-shvit/` ｜ 仓库：https://github.com/CaiCy6/med-modules/tree/main/011-shvit
+- 首建：2026-10-12 ｜ 状态：built
 
 ### 013-multimodal · Multimodal
 - 标题：【医学图像分割模块】Multimodal Routing and Region Refinement —— Multimodal Routing and Region Refinement for Language-Guided

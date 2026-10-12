@@ -1,0 +1,21 @@
+{
+  "id": "011-shvit",
+  "title": "【医学图像分割模块】SHViT —— 单头视觉 Transformer —— 砍掉多头冗余，做出又快又准的高效主干",
+  "tags": [
+    "医学图像分割",
+    "SHViT",
+    "轻量化",
+    "模块",
+    "PyTorch"
+  ],
+  "venue": "CVPR 2024",
+  "paper": "https://arxiv.org/abs/2401.16456",
+  "code": "https://github.com/ysj9909/SHViT",
+  "files": [
+    "demo.py",
+    "figure.png",
+    "readme.md",
+    "shvit.py"
+  ],
+  "name": "Shvit"
+}
